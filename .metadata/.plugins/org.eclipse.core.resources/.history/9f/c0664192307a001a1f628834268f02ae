@@ -1,0 +1,18 @@
+<?php
+ class One{
+     public $fruit = "apple";
+     final function getFruit() {
+         echo $this->fruit;
+     }
+    
+}
+
+class Two extends One{
+    function getFruit() {       //--final-- Cannot Overwrite
+        echo $this->fruit;
+    }    
+}
+
+$obj = new Two();
+$obj->getFruit();
+?>

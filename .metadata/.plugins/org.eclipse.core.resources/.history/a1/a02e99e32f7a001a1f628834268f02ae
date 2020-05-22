@@ -1,0 +1,17 @@
+<?php
+ class One{
+     public $fruit = "apple";
+     function getFruit() {
+         echo $this->fruit;
+     }
+    
+}
+
+class Two extends One{
+//     public $fruit = "orange";
+    
+}
+
+$obj = new Two();
+$obj->getFruit();
+?>

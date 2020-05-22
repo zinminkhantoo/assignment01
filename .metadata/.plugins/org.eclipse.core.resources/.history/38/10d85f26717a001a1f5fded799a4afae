@@ -1,0 +1,29 @@
+<?php
+abstract class ParentClass{
+    abstract protected function GetName($name);
+}
+
+class ChildClass extends ParentClass{
+    public function GetName($name){
+        if($name=="John")
+            $temp =  "Mr";
+        else if ($name = "Taylor") 
+            $temp = "Mrs";
+        else 
+            $temp = "";
+        return "{$temp} {$name}";       //return value passing arguments
+    }
+}
+
+class ChildClass2 extends ParentClass{
+    public function GetName($name,$dot = ".", $tmp){
+        
+    }
+}
+
+    $obj = new ChildClass();
+    echo $obj->GetName("John")."</br>";
+    echo $obj->GetName("Taylor");
+    
+    
+?>

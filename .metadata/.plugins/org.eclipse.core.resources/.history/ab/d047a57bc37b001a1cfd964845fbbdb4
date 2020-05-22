@@ -1,0 +1,48 @@
+<?php
+    class Cart {
+        private $id;
+        private $name;
+        private $price;
+        function __construct($id, $name, $price) {
+            $this->id = $id;
+            $this->name = $name;
+            $this->price = $price;
+        }
+        function GetID() {
+            return $this->id;
+        }
+        function GetName() {
+            return $this->name;
+        }
+        function GetPrice() {
+            return $this->price;
+        }
+    }
+    $products = array(
+        1 => new Cart(1, "SuperWidget", 19.99),
+        2 => new Cart(2, "MegaWidget", 29.99),
+        3 => new Cart(3 , "WonderWidget" , 39.99)
+    );
+    
+   function Diaplay() {
+       global $products;
+       ?>
+       <h1>Product List</h1>
+       <dl>
+       <?php 
+       foreach ($products as $product){
+           ?>
+           		
+  <dt> <?php echo $product->GetName() ?></dt>
+  <dd> <?php echo number_format($product->GetPrice())?>
+  <a href="Session.php?action=addItem&amp;productId=<?php echo $product->GetID()?>"> Add Item </a></dd>
+
+
+           <?php 
+       }
+       ?>
+       </dl>
+       <?php 
+   }
+   
+?>

@@ -1,0 +1,102 @@
+<?php
+session_start();
+    class Cart {
+        private $id;
+        private $name;
+        private $price;
+        function __construct($id, $name, $price) {
+            $this->id = $id;
+            $this->name = $name;
+            $this->price = $price;
+        }
+        function GetID() {
+            return $this->id;
+        }
+        function GetName() {
+            return $this->name;
+        }
+        function GetPrice() {
+            return $this->price;
+        }
+    }
+    $products = array(
+        1 => new Cart(1, "SuperWidget", 19.99),
+        2 => new Cart(2, "MegaWidget", 29.99),
+        3 => new Cart(3 , "WonderWidget" , 39.99)
+    );
+    if (!isset($_SESSION["cart"])) 
+        $_SESSION["cart"] = array();
+    elseif (isset($_GET["action"]) && $_GET["action"]=="addItem")
+echo "Hi";//         addItem();
+    elseif (isset($_GET["action"]) && $_GET["action"]=="removeItem")
+        removeItem();
+    else 
+        Display();
+    
+    
+    function addItem() { echo "addItem";
+//         global $products;
+//         if (isset($_GET["productId"]) && $_GET["productId"]>=1 && $_GET["productId"]<=3) {
+//             $productID = (int) $_GET["productId"];
+//             echo $productID;
+//             if (!isset($_SESSION["cart"][$productID])) {
+//                 $_SESSION["cart"] = $products[$productID];                
+//             }
+//         }
+        session_write_close();
+        header("Location: newfile.php");
+    }
+    
+    function removeItem(){
+        if (isset($_GET["productId"]) && $_GET["productId"]>=1 && $_GET["productId"]<=3) {
+            $productID = (int)$_GET["productId"];
+            if (isset($_SESSION["cart"][$productID])) {
+                unset($_SESSION["cart"][$productID]);
+            }
+        }
+        session_write_close();
+        header("Location: newfile.php");
+    }
+    function Display() {
+        global $products;
+       ?>
+       <html>
+       		<head>
+       			<title>Shoppping Cart</title>
+       		</head>
+       		<body>
+       			<h1>Your shopping cart</h1>
+       			<h3>Shop List</h3>
+       			<dl>
+       			<?php 
+       			$totalPrice = 0;
+       			foreach ($_SESSION["cart"] as $product){
+       			     $totalPrice +=$product->GetPrice(); 
+       			     ?>
+       			     <dt> <?php echo $product->GetName() ?></dt>
+  <dd> <?php echo number_format($product->GetPrice(), 2)?>
+  <a href="newfile.php?action=removeItem&amp;productId=<?php echo $product->GetID()?>"> Remove Item </a></dd><hr>
+       			     <?php 
+       			}
+       			?>
+       			<dt>Cart Total:</dt><dd><?php echo $totalPrice?></dd>
+       			</dl>
+       			<h3>Product List</h3>
+       			<dl>
+       <?php 
+       foreach ($products as $product){
+           ?>
+           		
+  <dt> <?php echo $product->GetName() ?></dt>
+  <dd> <?php echo number_format($product->GetPrice(), 2)?>
+  <a href="newfile.php?action=addItem&amp;productId=<?php echo $product->GetID()?>"> Add Item </a></dd><hr>
+           <?php 
+       }
+       ?>
+       </dl>
+       <?php 
+    }
+    
+?>
+</body>
+	</html>

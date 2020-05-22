@@ -1,0 +1,14 @@
+<?php
+
+    echo "Hello";
+
+    
+    $file = "index.txt";
+    if (!file_exists($file)) 
+        exit("File not exit.");
+    else 
+        fopen($file, 'r');
+
+    echo "Thanks.";
+    
+?>

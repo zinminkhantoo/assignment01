@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Session.php&apos; to &apos;Session&apos;" description="Move &apos;Session.php&apos; to &apos;Session&apos;" destination="Session" element1="Session.php" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1585825494899" updateReferences="true"/>
+</session>

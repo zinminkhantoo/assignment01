@@ -1,0 +1,29 @@
+<?php
+    trait Animals {
+        public $animals;
+        function SetAnimals($name) {
+            $this->animals = $name;
+        }
+    }
+    
+    trait Fruits {
+        public $fruits;
+        function SetFruit($name) {
+            $this->fruits = $name;
+        }
+    }
+    
+    class Bird{
+        use Animals;
+        function GetAnimals() {
+            return $this->animals;
+        }
+    }
+    
+    class Eat {
+        use Animals, Fruits;
+        function function_name() {
+            ;
+        }
+    }
+?>

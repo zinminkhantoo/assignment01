@@ -1,0 +1,15 @@
+<?php
+class Fruit{    
+//     function __construct() {
+//         self::GetName();
+//     }
+    
+    public static function GetName(){
+        echo "Orange";
+    }
+    
+    
+}
+//     new Fruit();            //It is OK
+    Fruit::GetName();
+?>

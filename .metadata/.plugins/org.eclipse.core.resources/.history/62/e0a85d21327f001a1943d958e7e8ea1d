@@ -1,0 +1,8 @@
+<?php
+ function solution($a, $b , $c) {
+     $tmp = null;
+     ($a*pow($tmp, 2)) + ($b*$tmp) + $c = 0;
+ }
+ 
+ echo"Solution of (1,0,-1) is: ";
+?>

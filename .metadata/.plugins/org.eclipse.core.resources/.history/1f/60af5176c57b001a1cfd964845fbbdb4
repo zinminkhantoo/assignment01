@@ -1,0 +1,15 @@
+<?php 
+    function Display() {
+       ?>
+       <html>
+       		<head>
+       			<title>Shoppping Cart</title>
+       		</head>
+       		<body>
+       			<h1>Your shopping cart</h1>
+       			<h1>Product List</h1>
+       <?php 
+    }
+    
+    Display();
+?>

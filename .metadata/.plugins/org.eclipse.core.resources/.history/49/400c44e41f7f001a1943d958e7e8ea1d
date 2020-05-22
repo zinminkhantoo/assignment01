@@ -1,0 +1,20 @@
+<?php
+    function doubleChar($str) {
+        $tmp = str_split($str);
+         $DoubleCh = array();
+        for ($i = 0; $i < count($tmp); $i++) {
+            if ($tmp[$i] != " "){
+                for ($j = 0; $j < 2; $j++) {
+                    $DoubleCh[$i]= $tmp[$i];
+                    echo $DoubleCh[$i];
+                }
+            }
+            
+//                 else 
+//                     $DoubleCh[$i] == " ";
+                }                
+        
+    return implode("", $DoubleCh);
+    }
+    echo "Double character: ".doubleChar("Hello, World.");
+?>

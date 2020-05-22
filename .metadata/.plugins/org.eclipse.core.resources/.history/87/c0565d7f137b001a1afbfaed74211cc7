@@ -1,0 +1,19 @@
+<?php
+class Fruit{    
+    function __construct() {
+        self::GetName();
+    }
+    
+    public static function GetName(){
+        echo "Orange";
+    }
+    public static function GetAnimals(){
+        self::GetName();
+        echo "</br>Monkey";
+    }
+    
+    
+}
+    new Fruit();            //It is OK
+    Fruit::GetAnimals();
+?>

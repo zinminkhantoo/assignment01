@@ -1,0 +1,7 @@
+<?php
+    $fruit = array(
+        1 => "apple",
+        2 => "orange",
+        3 => "mango"
+    );
+?>

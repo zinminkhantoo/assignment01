@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Test/OPP/Constructor_Vs_Destructor&apos; to &apos;Constructor_Vs_Destructor.php&apos;" description="Rename resource &apos;Constructor_Vs_Destructor&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="OPP/Constructor_Vs_Destructor" name="Constructor_Vs_Destructor.php" stamp="1586408524343" updateReferences="true"/>
+</session>

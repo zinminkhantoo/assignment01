@@ -1,0 +1,25 @@
+<?php
+
+    $file1 = "cpu.conf";
+    try {
+        if (file_exists($file1)) 
+            echo "File is exit.";
+        else 
+            throw new Exception("$file1 does not exit.</br></br>");
+        
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+    
+    
+    
+    
+    $file = "index.txt";
+    if (!file_exists($file)) 
+        exit("File not exit.");
+    else 
+        fopen($file, 'r');
+
+    echo "Thanks.";
+    
+?>

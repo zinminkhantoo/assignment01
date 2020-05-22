@@ -1,0 +1,4 @@
+<?php
+    $test = "Hello world, nice to meet you.Thanks you.";
+    echo lcfirst($test);
+?>

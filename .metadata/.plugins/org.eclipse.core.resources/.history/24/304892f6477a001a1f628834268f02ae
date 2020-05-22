@@ -1,0 +1,9 @@
+<?php
+    class Constants {
+        const COLOR = "Red";
+        function getColor($name) {
+            $this->COLOR = $name;
+        }
+        }
+    echo Constants::COLOR;
+?>

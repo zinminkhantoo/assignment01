@@ -1,0 +1,13 @@
+<?php
+    class Access {
+        public $fruit;
+        private $color;
+        protected $animals;
+        
+        
+    }
+    
+    $obj = new Access();
+    echo $obj->fruit;
+    
+?>

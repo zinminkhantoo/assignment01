@@ -1,0 +1,17 @@
+<?php
+    abstract class Fruit{
+        public $name;
+        public $color;
+        function __construct($name, $color) {
+            $this->name = $name;
+            $this->color = $color;
+        }
+        abstract public  function fruitInfo():string;
+    }
+    
+    class Apple extends Fruit{
+        function fruitInfo() {
+            ;
+        }
+    }
+?>

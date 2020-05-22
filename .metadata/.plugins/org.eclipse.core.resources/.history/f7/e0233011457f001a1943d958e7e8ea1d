@@ -1,0 +1,13 @@
+<?php
+    function charCount($str1, $str2 ) {
+        $tmp = str_split($str2);    //String to Array
+        $num = 0;
+        for ($i = 0; $i < count($tmp); $i++) {
+            if ($str1 == $tmp[$i]) 
+                $num++;            
+        }
+        return $num;
+    }
+    echo "The number of times is: ".charCount("p" , "Pineapple is not apple.");
+    
+?>

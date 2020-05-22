@@ -1,0 +1,62 @@
+<?php
+    $player1 = rand(1,3);
+    $player2 = rand(1,3);
+    $win = 0;
+    $stateP1 = null;
+    $stateP2 = null;
+    switch ($palyer1) {
+        case 1: $stateP1 = "rock";break;
+        case 1: $stateP1 = "scissors";break;
+        case 1: $stateP1 = "paper";break;
+    }
+    
+    switch ($palyer2) {
+        case 1: $stateP2 = "rock";break;
+        case 1: $stateP2 = "scissors";break;
+        case 1: $stateP2 = "paper";break;
+    }
+    if ($stateP1 == "rock" && $stateP2=="scissors") {
+        $win = 1;
+    }
+    elseif ($stateP1 == "scissors" && $stateP2 == "paper") {
+        $win = 2;
+    }
+    else 
+        $win = 3;
+    
+    
+?>
+<html>
+	<head>
+		<title>Problem 5</title>
+	</head>
+	<body>
+		<form action="Problem5.php" method="post">
+			<label><b>Player 1 | </b></label>
+			<?php 
+			     if (!isset($_POST['submit'])) echo "Rocks , Scissors or Paper (something!)";
+			     else {
+			         switch ($player1) {
+			             case 1: echo "Rocks";break;
+			             case 2: echo "Scissors";break;
+			             case 3: echo "Paper";break;    
+			         }
+			     }
+			?>
+			</br></br>
+			<label><b>Player 2 | </b></label>
+			<?php 
+			     if (!isset($_POST['submit'])) echo "Rocks , Scissors or Paper (something!)";
+			     else {
+			         switch ($player2) {
+			             case 1: echo "Rocks";break;
+			             case 2: echo "Scissors";break;
+			             case 3: echo "Paper";break;
+			         }
+			     }
+			?>
+			</br></br></br>
+			<input type="submit" name="submit" value="Play">
+		</form>
+	</body>
+</html>

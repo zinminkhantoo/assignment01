@@ -1,0 +1,8 @@
+<?php
+class Fruit{
+    public static function GetName(){
+        echo "Apple";
+    }
+}
+    Fruit::GetName();
+?>

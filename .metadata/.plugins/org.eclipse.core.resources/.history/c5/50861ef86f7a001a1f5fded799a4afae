@@ -1,0 +1,5 @@
+<?php
+abstract class Fruit{
+    abstract protected function GetName($name);
+}
+?>

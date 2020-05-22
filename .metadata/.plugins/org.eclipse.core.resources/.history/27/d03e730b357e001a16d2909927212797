@@ -1,0 +1,6 @@
+<?php
+    $str1 = "Hello world";
+    $str2 = "Hello world.Nice good.";
+    
+    echo strcmp($str1, $str2);
+?>

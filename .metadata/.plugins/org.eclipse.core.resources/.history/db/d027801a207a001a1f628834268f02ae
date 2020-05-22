@@ -1,0 +1,17 @@
+<?php
+    class Access {
+        public $fruit;
+        private $color;
+        protected $animals;
+        
+        function __construct($name) {
+            $this->fruit = $name;
+        }
+        function __destruct() {
+            echo "Fruit name is ".$this->fruit;
+        }
+    }
+    
+    $obj = new Access("Apple");
+    
+?>

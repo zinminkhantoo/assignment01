@@ -1,0 +1,14 @@
+<?php
+    class Access {
+        public $fruit;
+        private $color;
+        protected $animals;
+        
+        function __construct($name) {
+            $this->fruit;
+        }
+        function __destruct() {
+            echo "Fruit name is ".$this->fruit;
+        }
+    }
+?>

@@ -1,0 +1,7 @@
+<?php 
+    function Display() {
+        echo "Hello";
+    }
+    
+    Display();
+?>

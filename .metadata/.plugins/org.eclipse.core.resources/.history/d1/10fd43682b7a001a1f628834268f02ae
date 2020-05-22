@@ -1,0 +1,27 @@
+<?php
+class Fruit{
+    public $fruit;
+    public $color;
+    function __construct($name, $color) {
+        $this->fruit = $name;
+        $this->color = $color;
+    }
+    protected function GetInfo() {
+        echo "Fruit name is ".$this->fruit." and color is ".$this->color.".";
+    }
+}
+
+class Apple extends Fruit {
+    function Name() {
+        echo "What is fruit name?</br>";
+        $this->GetInfo();
+        
+    }
+    
+}
+
+$apple = new Apple("Apple","Red");
+$apple->Name();
+// echo $apple->fruit;     //Access Public Modifier
+// $apple->GetInfo();      //Cannot Access protected Modifier
+?>

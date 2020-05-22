@@ -1,0 +1,23 @@
+<?php
+class Fruit{    
+    function __construct() {
+        self::GetName();
+    }
+    
+    public static function GetName(){
+        echo "</br>Orange";
+    }
+    public static function GetAnimals(){
+        self::GetName();
+        echo "</br>Monkey";
+    }    
+}
+
+class Color extends Fruit{
+    function Fruit_Color() {
+        ;
+    }
+}
+    new Fruit();            //It is OK
+    Fruit::GetAnimals();
+?>

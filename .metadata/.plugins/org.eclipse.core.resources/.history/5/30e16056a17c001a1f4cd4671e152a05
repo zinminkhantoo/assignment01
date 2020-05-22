@@ -1,0 +1,5 @@
+<?php
+    $test = "Hello world, nice to meet you.Thanks you.";
+    echo "Oraginal String => $test";
+    echo lcfirst($test);
+?>

@@ -1,0 +1,14 @@
+<?php
+    class Fruit {
+        public $name;
+        public static function SetName($name) {
+            $this->name = $name;
+        }
+        public static function GetName(){
+            return $this->name;
+        }
+    }
+    Fruit::SetName("Apple");
+    
+    
+?>

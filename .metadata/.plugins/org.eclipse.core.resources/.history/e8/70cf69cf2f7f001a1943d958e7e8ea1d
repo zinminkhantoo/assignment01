@@ -1,0 +1,7 @@
+<?php
+ function solution($n1, $n2 , $n3) {
+     ;
+ }
+ 
+ echo"Solution of (1,0,-1) is: ";
+?>

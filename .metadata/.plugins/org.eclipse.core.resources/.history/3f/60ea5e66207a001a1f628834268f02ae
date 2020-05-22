@@ -1,0 +1,12 @@
+<?php
+    class Access {
+        public $fruit = "Apple";
+        private $color = "Red";
+        protected $animals = "Golden Fish";
+        
+    }
+    
+    $obj = new Access();
+    echo $obj->color;
+    
+?>

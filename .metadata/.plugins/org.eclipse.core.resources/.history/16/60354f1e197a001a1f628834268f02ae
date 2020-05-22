@@ -1,0 +1,25 @@
+<?php
+	class Fruit{
+		public $name;
+		function __construct($value)
+		{
+			$this->name = $value;
+			echo "I am constructor</br></br>";
+		}
+		public function getName()
+		{
+			echo "Fruit name is ".$this->name."</br></br>";
+		}
+
+		function __destruct() {
+		    echo "I am destructor</br></br>";
+		    echo "Destructor ".$name;
+		}
+	}
+
+	$fruit = new Fruit("Apple");
+	$fruit->getName();
+	$fruit->getName();
+	$fruit2 = new Fruit("Orange");
+	
+	?>

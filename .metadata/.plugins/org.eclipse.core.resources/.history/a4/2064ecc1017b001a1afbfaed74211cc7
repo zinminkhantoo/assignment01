@@ -1,0 +1,14 @@
+<?php
+class Fruit{    
+    function __construct() {
+        self::GetName();
+    }
+    
+    public static function GetName(){
+        echo "Apple";
+    }
+    
+    
+}
+    new Fruit();
+?>

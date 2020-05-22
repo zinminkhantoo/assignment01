@@ -1,0 +1,7 @@
+<?php
+    $str1 = "Hello world";
+    $str2 = "HELLO WORLD";
+    
+    echo strcmp($str1, $str2)."</br></br>";
+    echo strlen($str1)."</br></br>";
+?>

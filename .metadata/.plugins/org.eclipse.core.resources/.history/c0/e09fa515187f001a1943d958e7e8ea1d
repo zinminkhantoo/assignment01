@@ -1,0 +1,7 @@
+<?php
+    function charCount($str1, $str2 ) {
+        return  $str1+$str2;
+    }
+
+    $count = charCount("p" , "Pineapple is not apple.");
+?>

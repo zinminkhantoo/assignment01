@@ -1,0 +1,8 @@
+<?php
+    trait Animals {
+        public $name;
+        function SetName($name) {
+            $this->name = $name;
+        }
+    }
+?>

@@ -1,0 +1,9 @@
+<?php
+    function charCount($str1, $str2 ) {
+        $tmp = str_split($str2);
+        return print_r($tmp);
+    }
+
+    echo charCount("p" , "Pineapple is not apple.");
+    
+?>

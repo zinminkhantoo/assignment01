@@ -1,0 +1,15 @@
+<?php
+class One{
+     public $fruit = "apple";
+    
+}
+
+class Two extends One{
+//     public $fruit = "orange";
+    function __construct() {
+        echo $this->fruits;
+    }
+}
+
+$obj = new Two();
+?>

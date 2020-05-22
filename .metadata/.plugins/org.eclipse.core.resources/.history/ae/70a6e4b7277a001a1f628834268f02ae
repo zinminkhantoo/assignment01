@@ -1,0 +1,10 @@
+<?php
+class Fruit{
+    protected $fruit;
+    protected $color;
+    function __construct($name, $color) {
+        $this->fruit = $name;
+        $this->color = $color;
+    }
+}
+?>

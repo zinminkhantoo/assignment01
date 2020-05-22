@@ -1,0 +1,29 @@
+<?php
+    define(TIME, 30/*min*/);
+    define(WAGE, 20/*$*/);
+    function Programmer($p1, $p2, $p3) {
+        $p1 = ($p1/TIME)*WAGE;      //Change to hour * wage
+        $p2 = ($p2/TIME)*WAGE;
+        $p3 = ($p3/TIME)*WAGE;
+        $high = 0;
+        $low = 0;
+        switch ($high) {
+            case $p1>$p2: $high = $p1;break;
+            case $p1>$p3: $high = $p1;break;
+            case $p2>$p1: $high = $p2;break;
+            case $p2>$p3: $high = $p2;break;
+            case $p3>$p1: $high = $p2;break;
+            case $p3>$p2: $high = $p2;break;        
+        }        
+        switch ($low) {
+            case $p1<$p2: $low = $p1;break;
+            case $p1<$p3: $low = $p1;break;
+            case $p2<$p1: $low = $p2;break;
+            case $p2<$p3: $low = $p2;break;
+            case $p3<$p1: $low = $p2;break;
+            case $p3<$p2: $low = $p2;break;
+        }        
+      return $high-$low;  
+    }
+    echo "Difference wage is: ".Programmer(350, 420, 360);  //min 
+?>

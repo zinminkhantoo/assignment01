@@ -1,0 +1,13 @@
+<?php
+    $test = " hello world, nice to meet you.Thanks you.let me stop. ";
+    $enter = "</br></br>";
+    echo "Oraginal String =>".$test.$enter;
+    echo "lcfirst() => ".lcfirst($test).$enter;
+    echo "ucwords() => " .ucwords($test).$enter;
+    echo "strtoupper() => ".strtoupper($test).$enter;
+    echo "strtolower() => ".strtolower($test).$enter;
+    echo 'trim($test) => '.trim($test," ").$enter;
+    echo 'str_replace($test) => '.str_replace(" ", "", $test).$enter;
+    
+    
+?>

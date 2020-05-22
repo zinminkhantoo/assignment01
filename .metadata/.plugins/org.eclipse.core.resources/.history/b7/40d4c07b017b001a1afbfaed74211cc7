@@ -1,0 +1,14 @@
+<?php
+    class Animals {
+        public $animals;
+        function SetAnimals($name) {
+            $this->animals = $name;
+        }
+        function GetAnimals() {
+            return $this->animals ;
+        }
+    }
+    Animals::SetName("Monkey");
+    echo Animals::GetName();  
+    
+?>

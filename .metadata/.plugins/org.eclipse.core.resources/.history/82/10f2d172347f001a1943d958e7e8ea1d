@@ -1,0 +1,18 @@
+<?php
+ function solution($a, $b , $c) {
+     
+     $d = $b*$b - 4*$a*$c;
+     if($d < 0) {
+         return "no solutions!";
+     } elseif($d == 0) {
+         return "x = ".(-$b / 2*$a);
+     } else  {
+         return "x1 = ".((-$b + sqrt($d)) / (2*$a)). 
+                 " , x2 = ".((-$b - sqrt($d)) / (2*$a));
+     }
+ }
+ 
+ echo"Solution of (1, 0, -1) is: ".solution(1, 0, -1)."</br></br>";
+ echo"Solution of (1, 0, -1) is: ".solution(1, 0, 1)."</br></br>"; 
+ echo"Solution of (1, 0, -1) is: ".solution(1, 0, 0)."</br></br>"; 
+?>

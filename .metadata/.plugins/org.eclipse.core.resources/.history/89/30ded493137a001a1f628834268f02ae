@@ -1,0 +1,16 @@
+<?php
+	class Fruit{
+		private $name;
+		function __construct($value)
+		{
+			$this->name = $value;
+			echo "I am constructor";
+		}
+		public function getName()
+		{
+			echo "Fruit name is: ".$this->name;
+		}
+	}
+
+	$fruit = new Fruit("Apple");
+?>

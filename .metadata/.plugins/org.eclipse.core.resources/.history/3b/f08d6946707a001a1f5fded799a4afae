@@ -1,0 +1,12 @@
+<?php
+abstract class ParentClass{
+    abstract protected function GetName($name);
+}
+
+class ChildClass extends ParentClass{
+    public function GetName($name){
+        
+    }
+}
+    
+?>

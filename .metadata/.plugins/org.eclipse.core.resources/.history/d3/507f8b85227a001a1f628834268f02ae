@@ -1,0 +1,24 @@
+<?php
+    class Access {
+        public $fruit;
+        private $color;
+        protected $animals;
+        
+        function setFruit($name) {
+            $this->fruit = name;
+        }
+        private function setColor($name) {
+            $this->color = name;
+        }
+        protected function setAnimals($name) {
+            $this->animals = name;
+        }
+        
+    }
+    
+    $fruit = new Access("Apple");
+    $color = new Access("Red");
+    $animals = new Access("Ant");
+    
+    
+?>

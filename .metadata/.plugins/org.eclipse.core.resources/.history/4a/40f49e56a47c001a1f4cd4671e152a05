@@ -1,0 +1,13 @@
+<?php
+    $test = " Hello world, nice to meet you.Thanks you.let me stop. ";
+    echo "Oraginal String => $test</br></br>";
+    echo "lcfirst() => ".lcfirst($test)."</br></br>";
+    echo "ucwords() => " .ucwords($test)."</br></br>";
+    echo "strtoupper() => ".strtoupper($test)."</br></br>";
+    echo "strtolower() => ".strtolower($test)."</br></br>";
+    echo 'trim($test) => '.trim($test," ");
+    
+    $a = " 09976 181 924";
+    echo strlen($a);
+    echo strlen(trim($a));
+?>

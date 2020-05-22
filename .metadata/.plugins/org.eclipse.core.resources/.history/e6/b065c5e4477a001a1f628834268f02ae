@@ -1,0 +1,6 @@
+<?php
+    class Constants {
+        const COLOR = "Red";
+        }
+    echo Constants::COLOR;
+?>

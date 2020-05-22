@@ -1,0 +1,7 @@
+<?php
+    $test = "Hello world, nice to meet you.Thanks you.";
+    echo "Oraginal String => $test</br></br>";
+    echo "lcfirst() => ".lcfirst($test)."</br></br>";
+    echo "ucwords() =>" .ucwords($test)."</br></br>";
+    echo "strtoupper() =>".strtoupper($test)."</br></br>";
+?>

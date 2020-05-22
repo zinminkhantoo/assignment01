@@ -1,0 +1,5 @@
+<?php
+    function Test($str1 = "String1 ",$str2 = "String2") {
+        return  $str1+$str2;
+    }
+?>

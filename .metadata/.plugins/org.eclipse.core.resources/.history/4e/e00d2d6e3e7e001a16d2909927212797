@@ -1,0 +1,13 @@
+<?php
+    $str1 = "Hello world, the world is comming & the sun is shine.";
+    $str2 = "HELLO WORLD";
+    
+    echo strcmp($str1, $str2)."</br></br>";
+    echo strlen($str1)."</br></br>";
+    echo strpos($str1, "the")."</br></br>";
+    echo strrpos($str1, "the")."</br></br>";
+    echo stripos($str1, "The")."</br></br>";
+    echo strripos($str1, "THE")."</br></br>";
+    echo str_word_count($str1)."</br></br>";
+    echo substr($str1, 0, 11);
+?>

@@ -1,0 +1,75 @@
+<?php
+session_start();
+    class Cart {
+        private $id;
+        private $name;
+        private $price;
+        function __construct($id, $name, $price) {
+            $this->id = $id;
+            $this->name = $name;
+            $this->price = $price;
+        }
+        function GetID() {
+            return $this->id;
+        }
+        function GetName() {
+            return $this->name;
+        }
+        function GetPrice() {
+            return $this->price;
+        }
+    }
+    $products = array(
+        1 => new Cart(1, "SuperWidget", 19.99),
+        2 => new Cart(2, "MegaWidget", 29.99),
+        3 => new Cart(3 , "WonderWidget" , 39.99)
+    );
+    if (!isset($_SESSION["cart"])) 
+        $_SESSION["cart"] = array();
+    elseif (isset($_GET["action"]) && $_GET["action"]="addItem")
+        addItem();
+    elseif (isset($_GET["action"]) && $_GET["action"]="removeItem")
+        removeItem();
+    else 
+        Display();
+    
+    
+    function addItem() {
+        global $products;
+        if (isset($_GET["productId"]) && $_GET["productId"]>=1 && $_GET["productId"]<=3) {
+            $productID = (int)$_GET["productId"];
+            
+        }
+    }
+    
+    function removeItem(){
+        
+    }
+    function Display() {
+        global $products;
+       ?>
+       <html>
+       		<head>
+       			<title>Shoppping Cart</title>
+       		</head>
+       		<body>
+       			<h1>Your shopping cart</h1>
+       			<h1>Product List</h1>
+       			<dl>
+       <?php 
+       foreach ($products as $product){
+           ?>
+           		
+  <dt> <?php echo $product->GetName() ?></dt>
+  <dd> <?php echo number_format($product->GetPrice(), 2)?>
+  <a href="newfile.php?action=addItem&amp;productId=<?php echo $product->GetID()?>"> Add Item </a></dd>
+           <?php 
+       }
+       ?>
+       </dl>
+       <?php 
+    }
+    
+?>
+</body>
+	</html>

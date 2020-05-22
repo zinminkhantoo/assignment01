@@ -1,0 +1,29 @@
+<?php
+    abstract class Fruit{
+        public $name;
+        public $color;
+        function __construct($name, $color) {
+            $this->name = $name;
+            $this->color = $color;
+        }
+        abstract public  function fruitInfo();
+    }
+    
+    class Apple extends Fruit{
+        function fruitInfo() {
+            echo "This fruit is ".$this->name." and color is ".$this->color."</br></br>";            
+        }
+    }
+    
+    class Orange extends Fruit{
+        function fruitInfo() {
+            echo "This fruit is ".$this->name." and color is ".$this->color."</br></br>";
+          }
+    }
+    
+    class Mango extends Fruit {
+        function fruitInfo() {
+            echo "This fruit is ".$this->name." and color is ".$this->color."</br></br>";            
+        }
+    }
+?>

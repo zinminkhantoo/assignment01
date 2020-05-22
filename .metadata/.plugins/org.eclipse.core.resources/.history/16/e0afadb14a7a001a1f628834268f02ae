@@ -1,0 +1,12 @@
+<?php
+    class Constants {
+        const COLOR = "Red";
+        function getColor($name) {
+            echo "</br>Color is: ".self::COLOR;
+        }
+        }
+    echo Constants::COLOR;
+    $obj = new Constants();
+    $obj->getColor("Green");
+   
+?>

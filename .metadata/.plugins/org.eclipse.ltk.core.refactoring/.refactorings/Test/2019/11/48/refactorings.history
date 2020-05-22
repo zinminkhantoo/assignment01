@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;PHPDocument 1.php&apos; to &apos;Test&apos;" description="Move &apos;PHPDocument 1.php&apos; to &apos;Test&apos;" destination="/Test" element1="/Web/PHPDocument 1.php" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1575021366095" updateReferences="true"/>
+</session>

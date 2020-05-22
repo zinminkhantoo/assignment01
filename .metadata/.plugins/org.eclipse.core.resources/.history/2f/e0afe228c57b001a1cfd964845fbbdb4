@@ -1,0 +1,27 @@
+<!-- function Diaplay() { -->
+       global $products;
+       ?>
+       <html>
+       		<head>
+       			<title>Shoppping Cart</title>
+       		</head>
+       		<body>
+       			<h1>Your shopping cart</h1>
+       			<h1>Product List</h1>
+       <dl>
+       <?php 
+       foreach ($products as $product){
+           ?>
+           		
+  <dt> <?php echo $product->GetName() ?></dt>
+  <dd> <?php echo number_format($product->GetPrice(), 2)?>
+  <a href="Session.php?action=addItem&amp;productId=<?php echo $product->GetID()?>"> Add Item </a></dd>
+           <?php 
+       }
+       ?>
+       </dl>
+       <?php 
+//    }   
+?>
+</body>
+  </html>

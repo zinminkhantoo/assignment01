@@ -1,0 +1,34 @@
+<?php
+    trait Animals {
+        public $animals;
+        function SetAnimals($name) {
+            $this->animals = $name;
+        }
+    }
+    
+    trait Fruits {
+        public $fruits;
+        function SetFruit($name) {
+            $this->fruits = $name;
+        }
+    }
+    
+    class Bird{
+        use Animals;                //Inhertance with traint & use keyword
+        function GetAnimals() {
+            return $this->animals;
+        }
+    }
+    
+    class Eat {
+        use Animals, Fruits;        //Multiple Ingertance
+        function GetEat() {
+            return "{$this->animals} {$this->fruits}";
+        }
+    }
+    
+    
+    $bird = new Bird();
+    $bird->SetAnimals("Bird");
+    echo $bird->GetAnimals();
+?>

@@ -1,0 +1,5 @@
+<?php
+    $num = 12.99;
+    echo number_format($num , 2);
+    
+?>
